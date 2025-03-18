@@ -9,6 +9,10 @@ Just ignore the blender files and add the Multi_RayCast folder to your addons fo
 <br>
 Where "Multi_Raycast" is the a reference to the "Spider Leg" Node.
 <h3>Plugin UI</h3>
-The right side panel containing node properties will contain a SpiderLeg dropdown, which when expanded will show two buttons, namely "add" and "remove". The node works with a hierarchy system with the root ray at the top and the remaining rays being below the ones before them. This hierarchy is related to collision detection, that means collision is detected closer to the root, which means if there are two colliding bodies currently colliding with the ray_casts, then only the collision with the body, closer to the root in the hierarchy, will be detected and the other will be ignored. This behaviour can be see clearly below:
+The right side panel containing node properties will contain a SpiderLeg dropdown, which when expanded will show two buttons, namely "add" and "remove". The node works with a hierarchy system with the root ray at the top and the remaining rays being below the ones before them, the "add" button adds a new ray at the bottom of the hierarchy and the "remove" button removes a ray from the bottom of the hierarchy . 
+<br>
+<br>
+This hierarchy is related to collision detection, that means collision is detected closer to the root, which means if there are two colliding bodies currently colliding with the ray_casts, then only the collision with the body, closer to the root in the hierarchy, will be detected and the other will be ignored. This behaviour can be see clearly below:
+<br>
 
 
