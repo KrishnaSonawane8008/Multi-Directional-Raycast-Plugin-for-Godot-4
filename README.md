@@ -32,5 +32,6 @@ This is possible because of the Godot <a href="https://docs.godotengine.org/en/s
 Because i made this plugin in a rush, i wasn't able to implement some of the common features in the editor like the ability to duplicate a node, so if you try to duplicate a node, it will be glitched, so please don't try to do so, instead just make the required hierarchy again. Thank You.
 <h1>Resources</h1>
 Ray-casting :- https://docs.godotengine.org/en/stable/tutorials/physics/ray-casting.html
+<br>
 PhysicsRayQueryParameters3D :- https://docs.godotengine.org/en/stable/classes/class_physicsrayqueryparameters3d.html
 
