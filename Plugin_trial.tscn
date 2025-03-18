@@ -1,0 +1,84 @@
+[gd_scene load_steps=15 format=3 uid="uid://wldjvlagaos1"]
+
+[ext_resource type="Script" path="res://addons/Character_Movement/Movement.gd" id="1_p6p2t"]
+[ext_resource type="Script" path="res://addons/Multi_RayCast/SpiderLeg.gd" id="3_d6l5p"]
+[ext_resource type="PackedScene" uid="uid://dnx42bhnib5vr" path="res://fps.tscn" id="4_6ck8n"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fevl7"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_hca3a"]
+sky_material = SubResource("ProceduralSkyMaterial_fevl7")
+
+[sub_resource type="Environment" id="Environment_x3hkc"]
+background_mode = 2
+sky = SubResource("Sky_hca3a")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_ulmyi"]
+colors = PackedColorArray(0, 0.943033, 7.70092e-07, 1, 0.487194, 0.152929, 0.0637716, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_s83sh"]
+noise_type = 2
+frequency = 0.0761
+fractal_gain = 1.56
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vs3b1"]
+color_ramp = SubResource("Gradient_ulmyi")
+noise = SubResource("FastNoiseLite_s83sh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u01wr"]
+albedo_texture = SubResource("NoiseTexture2D_vs3b1")
+metallic = 0.34
+roughness = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_bx5bj"]
+material = SubResource("StandardMaterial3D_u01wr")
+size = Vector3(100, 1, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3hax6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2ip73"]
+material = SubResource("StandardMaterial3D_3hax6")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rkuvs"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_x3hkc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.0152, 0, 0, 0, 1.0152, 0, 0, 0, 1.0152, 0, 0, 0)
+mesh = SubResource("BoxMesh_bx5bj")
+
+[node name="Movable Char" type="Node3D" parent="."]
+transform = Transform3D(1.18859, 0, 0, 0, 1.18859, 0, 0, 0, 1.18859, 0.0423431, 9.83023, 25.0076)
+script = ExtResource("1_p6p2t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(0.489, 0, 0, 0, 0.489, 0, 0, 0, 0.489, 0, 10.2684, 1.02254)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_2ip73")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_rkuvs")
+
+[node name="FPS" parent="." instance=ExtResource("4_6ck8n")]
+
+[node name="Spider Leg" type="Node3D" parent="."]
+script = ExtResource("3_d6l5p")
+
+[node name="Spider Leg2" type="Node3D" parent="."]
+script = ExtResource("3_d6l5p")
+
+[node name="Spider Leg3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.332079, -0.943252, 0, 0.943252, 0.332079, 0, 10.7323, -1.2722)
+script = ExtResource("3_d6l5p")
