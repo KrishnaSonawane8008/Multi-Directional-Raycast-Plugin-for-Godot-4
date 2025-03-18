@@ -72,6 +72,7 @@ shape = SubResource("BoxShape3D_rkuvs")
 script = ExtResource("3_d6l5p")
 
 [node name="Spider Leg2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.43321, 0)
 script = ExtResource("3_d6l5p")
 
 [node name="Spider Leg3" type="Node3D" parent="."]
