@@ -14,5 +14,6 @@ The right side panel containing node properties will contain a SpiderLeg dropdow
 <br>
 This hierarchy is related to collision detection, that means collision is detected closer to the root, which means if there are two colliding bodies currently colliding with the ray_casts, then only the collision with the body, closer to the root in the hierarchy, will be detected and the other will be ignored. This behaviour can be see clearly below:
 <br>
+<video src="https://github.com/user-attachments/assets/7197525c-3053-471c-a36a-7d33d0d74ea1"></video>
 
 
