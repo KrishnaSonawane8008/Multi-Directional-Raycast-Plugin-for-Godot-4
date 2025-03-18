@@ -27,4 +27,10 @@ The black cube is the colision point and each blue line between the red cubes re
 <br>
 This is possible because of the Godot <a href="https://docs.godotengine.org/en/stable/classes/class_physicsrayqueryparameters3d.html">PhysicsRayQueryParameters3D class</a> which allows you to get the collision info between any two points in world space, what results is a raycast that can bend in multiple directions and detect collisions in multiple directions:
 <br>
+<video src="https://github.com/user-attachments/assets/03ee4670-ac27-4610-83ae-2ecdbc792458"></video>
+<h1>Some Limitations in UI</h1>
+Because i made this plugin in a rush, i wasn't able to implement some of the common features in the editor like the ability to duplicate a node, so if you try to duplicate a node, it will be glitched, so please don't try to do so, instead just make the required hierarchy again. Thank You.
+<h1>Resources</h1>
+Ray-casting :- https://docs.godotengine.org/en/stable/tutorials/physics/ray-casting.html
+PhysicsRayQueryParameters3D :- https://docs.godotengine.org/en/stable/classes/class_physicsrayqueryparameters3d.html
 
