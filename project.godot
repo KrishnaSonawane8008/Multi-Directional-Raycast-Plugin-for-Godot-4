@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/Character_Movement/plugin.cfg", "res://addons/Multi_RayCast/plugin.cfg")
+enabled=PackedStringArray("res://addons/Multi_RayCast/plugin.cfg")
 
 [input]
 

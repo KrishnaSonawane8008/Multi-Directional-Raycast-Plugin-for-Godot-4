@@ -1,6 +1,5 @@
-[gd_scene load_steps=15 format=3 uid="uid://wldjvlagaos1"]
+[gd_scene load_steps=14 format=3 uid="uid://wldjvlagaos1"]
 
-[ext_resource type="Script" path="res://addons/Character_Movement/Movement.gd" id="1_p6p2t"]
 [ext_resource type="Script" path="res://addons/Multi_RayCast/SpiderLeg.gd" id="3_d6l5p"]
 [ext_resource type="PackedScene" uid="uid://dnx42bhnib5vr" path="res://fps.tscn" id="4_6ck8n"]
 
@@ -57,10 +56,6 @@ environment = SubResource("Environment_x3hkc")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.0152, 0, 0, 0, 1.0152, 0, 0, 0, 1.0152, 0, 0, 0)
 mesh = SubResource("BoxMesh_bx5bj")
-
-[node name="Movable Char" type="Node3D" parent="."]
-transform = Transform3D(1.18859, 0, 0, 0, 1.18859, 0, 0, 0, 1.18859, 0.0423431, 9.83023, 25.0076)
-script = ExtResource("1_p6p2t")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(0.489, 0, 0, 0, 0.489, 0, 0, 0, 0.489, 0, 10.2684, 1.02254)
