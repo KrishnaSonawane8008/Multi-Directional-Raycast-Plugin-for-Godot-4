@@ -18,5 +18,13 @@ This hierarchy is related to collision detection, that means collision is detect
 <br>
 <br>
 <video src="https://github.com/user-attachments/assets/7197525c-3053-471c-a36a-7d33d0d74ea1"></video>
+<br>
 The black cube represents the collision point.
+<br>
+<h1>How it works</h1>
+The black cube is the colision point and each blue line between the red cubes represent a RayCast. A RayCast in Godot (and in any other game engine) is a ray used for collision detection. Any colliding object between a raycast is supposed to report its collision related info to the entity requesting it. My plugin is the same except it uses multiple RayCasts which can be arranged in any position you want(as shown in the UI video) and then the arrangement serves as a giant raycast which is bent in desired directions, bascially its a crooked racast which works as the original concept.
+<br>
+<br>
+This is possible because of the Godot <a href="https://docs.godotengine.org/en/stable/classes/class_physicsrayqueryparameters3d.html">PhysicsRayQueryParameters3D class</a> which allows you to get the collision info between any two points in world space, what results is a raycast that can bend in multiple directions and detect collisions in multiple directions:
+<br>
 
