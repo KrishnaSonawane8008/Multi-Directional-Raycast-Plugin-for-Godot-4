@@ -58,12 +58,21 @@ transform = Transform3D(1.0152, 0, 0, 0, 1.0152, 0, 0, 0, 1.0152, 0, 0, 0)
 mesh = SubResource("BoxMesh_bx5bj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(0.489, 0, 0, 0, 0.489, 0, 0, 0, 0.489, 0, 10.2684, 1.02254)
+transform = Transform3D(0.489, 0, 0, 0, 0.489, 0, 0, 0, 0.489, 0, 10.7262, 1.71841)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_2ip73")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_rkuvs")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(0.489, 0, 0, 0, 0.489, 0, 0, 0, 0.489, 0, 10.4412, 0.0287659)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+mesh = SubResource("BoxMesh_2ip73")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
 shape = SubResource("BoxShape3D_rkuvs")
 
 [node name="FPS" parent="." instance=ExtResource("4_6ck8n")]
@@ -73,6 +82,7 @@ script = ExtResource("3_d6l5p")
 
 [node name="Spider Leg2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.43321, 0)
+visible = false
 script = ExtResource("3_d6l5p")
 
 [node name="Spider Leg3" type="Node3D" parent="."]
